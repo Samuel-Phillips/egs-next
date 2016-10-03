@@ -5,3 +5,4 @@ all:
 
 clean:
 	rm -f $(wildcard *next.user.js)
+	rm -f README.md
