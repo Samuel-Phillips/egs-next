@@ -4,5 +4,6 @@ all:
 	python3 mknext.py
 
 clean:
-	rm -f $(wildcard *next.user.js)
+	rm -f out/$(wildcard *next.user.js)
+	rmdir out
 	rm -f README.md
