@@ -11,3 +11,4 @@ different webcomic.
 * [Fanboys Online](fbonext.user.js)
 * [Manga Reader.net](mrnnext.user.js)
 * [Saturday Morning Breakfast Cereal](smbcnext.user.js)
+* [Order of the Stick](ootsnext.user.js)

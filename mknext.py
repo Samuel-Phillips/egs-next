@@ -7,6 +7,8 @@ def do_file(fpath, tlate, readme):
         do_inst(sec, config[sec], tlate, readme)
 
 def do_inst(secname, secinfo, tlate, readme):
+    secinfo.setdefault('version', '1')
+    secinfo.setdefault('parenting', '0,0')
     with open(secname, mode='w') as f:
         f.write(tlate.format(**secinfo))
     print('* [{strip_name}]({0})'.format(secname, **secinfo), file=readme)

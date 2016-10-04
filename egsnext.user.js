@@ -10,8 +10,12 @@
 // ==/UserScript==
 
 $(function () {
+    var i;
+
     var next = document.querySelector('.next');
+    for (i = 0; i < [0,0][0]; i++) next = next.parentElement;
     var prev = document.querySelector('.prev');
+    for (i = 0; i < [0,0][1]; i++) prev = prev.parentElement;
 
     $(window).keydown(function (e) {
         if (e.keyCode === 39) {
