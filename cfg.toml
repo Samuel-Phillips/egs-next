@@ -1,0 +1,52 @@
+script_ver = 1
+script_ns = "samuelphillips.net"
+
+[[sites]]
+strip_name = "El Goonish Shrive"
+next_selector = ".next"
+prev_selector = ".prev"
+domain = "www.egscomics.com"
+
+[[sites]]
+strip_name = "Will Save World for Gold"
+next_selector = ".navi-next"
+prev_selector = ".navi-prev"
+domain = "willsaveworldforgold.com"
+
+[[sites]]
+strip_name = "General Protection Fault"
+next_selector = ".nav_link_forward a:first-child"
+prev_selector = ".nav_link_back a:last-child"
+domain = "www.gpf-comics.com"
+
+[[sites]]
+strip_name = "Gunnerkrigg Count"
+next_selector = ".extra .nav .right"
+prev_selector = ".extra .nav .left"
+domain = "www.gunnerkrigg.com"
+
+[[sites]]
+strip_name = "Fanboys Online"
+next_selector = ".next"
+prev_selector = ".prev"
+domain = "fanboys-online.com"
+
+[[sites]]
+strip_name = "Manga Reader.net"
+next_selector = ".next"
+prev_selector = ".prev"
+domain = "mangareader.net"
+
+[[sites]]
+strip_name = "Saturday Morning Breakfast Cereal"
+next_selector = "a.next"
+prev_selector = "a.prev"
+domain = "www.smbc-comics.com"
+
+[[sites]]
+strip_name = "Order of the Stick"
+# eww
+next_selector = "a > img[alt=\"Next Comic\"]"
+prev_selector = "a > img[alt=\"Previous Comic\"]"
+domain = "www.giantitp.com"
+parenting = [1, 1]

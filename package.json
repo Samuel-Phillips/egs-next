@@ -1,0 +1,6 @@
+{
+  "name": "egs-next",
+  "devDependencies": {
+    "livescript": "^1.5.0"
+  }
+}
