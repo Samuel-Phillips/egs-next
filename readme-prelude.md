@@ -1,6 +1,8 @@
-# Webcomic Next Buttons
+# Webcomic Keyboard Shortcuts
 
-This collection of greasemonkey scripts adds next buttons to a number of
-different webcomic.
+This greasemonkey script adds next / previous keyboard shortcuts to many
+different webcomics.
 
+<a href="webcomic-keyboard-shortcuts.user.js">
 # Install
+</a>
