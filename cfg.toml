@@ -20,7 +20,7 @@ prev_selector = ".nav_link_back a:last-child"
 domain = "www.gpf-comics.com"
 
 [[sites]]
-strip_name = "Gunnerkrigg Count"
+strip_name = "Gunnerkrigg Court"
 next_selector = ".extra .nav .right"
 prev_selector = ".extra .nav .left"
 domain = "www.gunnerkrigg.com"
