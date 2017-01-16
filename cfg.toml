@@ -1,5 +1,11 @@
-script_ver = 1.1
+script_ver = 1.2
 script_ns = "samuelphillips.net"
+
+[[sites]]
+strip_name = "Spacetrawler"
+next_selector = "a[rel=next]"
+prev_selector = "a[rel=prev]"
+domain = "www.baldwinpage.com"
 
 [[sites]]
 strip_name = "El Goonish Shrive"
