@@ -18,6 +18,5 @@ $(result): header.js body.js
 
 clean:
 	rm -f $(result)
-	rm -f README.md
 	rm -f header.js
 	rm -f body.js 
