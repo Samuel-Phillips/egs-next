@@ -63,3 +63,14 @@ next_selector = "[rel=next]"
 prev_selector = "[rel=prev]"
 domain = "www.tryinghuman.com"
 
+[[sites]]
+strip_name = "Drive"
+next_selector = "#comic-next a"
+prev_selector = "#comic-previous a"
+domain = "www.drivecomic.com"
+
+[[sites]]
+strip_name = "Cyanide & Happiness"
+prev_selector = "a.previous-comic"
+next_selector = "a.next-comic"
+domain = "explosm.net"
