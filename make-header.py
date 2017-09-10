@@ -21,6 +21,16 @@ icl = """\
 // @include     https://{domain}/*
 """
 
+def andjoin(l):
+    if not l:
+        return ''
+    elif len(l) == 1:
+        return l[0]
+    elif len(l) == 2:
+        return '{} and {}'.format(*l)
+    else:
+        return '{}, and {}'.format(', '.join(l[:-1]), l[-1])
+
 with open('cfg.toml') as cfgf: cfg = toml.load(cfgf)
 
 site_conf = {}
@@ -38,7 +48,7 @@ for site in cfg['sites']:
     strip_names.append(site['strip_name'])
 
 result = template.format(
-    strip_names=', '.join(strip_names),
+    strip_names=andjoin(strip_names),
     includelines=''.join(includes),
     version=cfg['script_ver'],
     script_ns=cfg['script_ns'],
