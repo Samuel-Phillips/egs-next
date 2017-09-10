@@ -74,3 +74,9 @@ strip_name = "Cyanide & Happiness"
 prev_selector = "a.previous-comic"
 next_selector = "a.next-comic"
 domain = "explosm.net"
+
+[[sites]]
+strip_name = "The Meek"
+prev_selector = "a.comic-nav-previous"
+next_selector = "a.comic-nav-next"
+domain = "www.meekcomic.com"
