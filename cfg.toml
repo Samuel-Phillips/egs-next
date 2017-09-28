@@ -1,4 +1,4 @@
-script_ver = 1.4
+script_ver = "1.5beta"
 script_ns = "samuelphillips.net"
 
 [[sites]]
@@ -80,3 +80,9 @@ strip_name = "The Meek"
 prev_selector = "a.comic-nav-previous"
 next_selector = "a.comic-nav-next"
 domain = "www.meekcomic.com"
+
+[[sites]]
+strip_name = "The Illustrated Guide to Law"
+prev_selector = "a[rel=prev]"
+next_selector = "a[rel=next]"
+domain = "lawcomic.net"
