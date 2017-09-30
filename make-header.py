@@ -31,6 +31,7 @@ template = """\
  *
  * The source code for this script can be found at the following URL:
  * https://github.com/Samuel-Phillips/egs-next
+ */
 
 const site_conf = {site_conf};
 """
