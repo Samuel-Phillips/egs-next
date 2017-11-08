@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Webcomic Keyboard Shortcuts
 // @namespace   samuelphillips.net
-// @description Keyboard shortcuts for multiple sites, including Spacetrawler, El Goonish Shrive, Will Save World for Gold, General Protection Fault, Gunnerkrigg Court, Fanboys Online, Manga Reader.net, Saturday Morning Breakfast Cereal, Order of the Stick, Trying Human, Drive, Cyanide & Happiness, The Meek, and The Illustrated Guide to Law.
+// @description Keyboard shortcuts for multiple sites, including Spacetrawler, El Goonish Shrive, Will Save World for Gold, General Protection Fault, Gunnerkrigg Court, Fanboys Online, Manga Reader.net, Saturday Morning Breakfast Cereal, Order of the Stick, Trying Human, Drive, Cyanide & Happiness, The Meek, The Illustrated Guide to Law, and Three Panel Soul.
 // @include     http://www.baldwinpage.com/*
 // @include     https://www.baldwinpage.com/*
 // @include     http://www.egscomics.com/*
@@ -30,8 +30,10 @@
 // @include     https://www.meekcomic.com/*
 // @include     http://lawcomic.net/*
 // @include     https://lawcomic.net/*
+// @include     http://www.threepanelsoul.com/*
+// @include     https://www.threepanelsoul.com/*
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @version     1.5
+// @version     1.6
 // @grant       none
 // ==/UserScript==
 
@@ -55,7 +57,7 @@
  * https://github.com/Samuel-Phillips/egs-next
  */
 
-const site_conf = {"www.egscomics.com": {"prev": ".prev", "name": "El Goonish Shrive", "next": ".next", "parenting": [0, 0]}, "mangareader.net": {"prev": ".prev", "name": "Manga Reader.net", "next": ".next", "parenting": [0, 0]}, "www.gpf-comics.com": {"prev": ".nav_link_back a:last-child", "name": "General Protection Fault", "next": ".nav_link_forward a:first-child", "parenting": [0, 0]}, "fanboys-online.com": {"prev": ".prev", "name": "Fanboys Online", "next": ".next", "parenting": [0, 0]}, "www.baldwinpage.com": {"prev": "a[rel=prev]", "name": "Spacetrawler", "next": "a[rel=next]", "parenting": [0, 0]}, "www.tryinghuman.com": {"prev": "[rel=prev]", "name": "Trying Human", "next": "[rel=next]", "parenting": [0, 0]}, "willsaveworldforgold.com": {"prev": ".navi-prev", "name": "Will Save World for Gold", "next": ".navi-next", "parenting": [0, 0]}, "www.drivecomic.com": {"prev": "#comic-previous a", "name": "Drive", "next": "#comic-next a", "parenting": [0, 0]}, "explosm.net": {"prev": "a.previous-comic", "name": "Cyanide & Happiness", "next": "a.next-comic", "parenting": [0, 0]}, "www.giantitp.com": {"prev": "a > img[alt=\"Previous Comic\"]", "name": "Order of the Stick", "next": "a > img[alt=\"Next Comic\"]", "parenting": [1, 1]}, "lawcomic.net": {"prev": "a[rel=prev]", "name": "The Illustrated Guide to Law", "next": "a[rel=next]", "parenting": [0, 0]}, "www.meekcomic.com": {"prev": "a.comic-nav-previous", "name": "The Meek", "next": "a.comic-nav-next", "parenting": [0, 0]}, "www.gunnerkrigg.com": {"prev": ".extra .nav .left", "name": "Gunnerkrigg Court", "next": ".extra .nav .right", "parenting": [0, 0]}, "www.smbc-comics.com": {"prev": "a.prev", "name": "Saturday Morning Breakfast Cereal", "next": "a.next", "parenting": [0, 0]}};
+const site_conf = {"willsaveworldforgold.com": {"name": "Will Save World for Gold", "next": ".navi-next", "prev": ".navi-prev", "parenting": [0, 0]}, "www.smbc-comics.com": {"name": "Saturday Morning Breakfast Cereal", "next": "a.next", "prev": "a.prev", "parenting": [0, 0]}, "www.baldwinpage.com": {"name": "Spacetrawler", "next": "a[rel=next]", "prev": "a[rel=prev]", "parenting": [0, 0]}, "explosm.net": {"name": "Cyanide & Happiness", "next": "a.next-comic", "prev": "a.previous-comic", "parenting": [0, 0]}, "www.gpf-comics.com": {"name": "General Protection Fault", "next": ".nav_link_forward a:first-child", "prev": ".nav_link_back a:last-child", "parenting": [0, 0]}, "fanboys-online.com": {"name": "Fanboys Online", "next": ".next", "prev": ".prev", "parenting": [0, 0]}, "www.tryinghuman.com": {"name": "Trying Human", "next": "[rel=next]", "prev": "[rel=prev]", "parenting": [0, 0]}, "www.gunnerkrigg.com": {"name": "Gunnerkrigg Court", "next": ".extra .nav .right", "prev": ".extra .nav .left", "parenting": [0, 0]}, "www.drivecomic.com": {"name": "Drive", "next": "#comic-next a", "prev": "#comic-previous a", "parenting": [0, 0]}, "www.threepanelsoul.com": {"name": "Three Panel Soul", "next": "a.next", "prev": "a.prev", "parenting": [0, 0]}, "mangareader.net": {"name": "Manga Reader.net", "next": ".next", "prev": ".prev", "parenting": [0, 0]}, "www.egscomics.com": {"name": "El Goonish Shrive", "next": ".next", "prev": ".prev", "parenting": [0, 0]}, "www.meekcomic.com": {"name": "The Meek", "next": "a.comic-nav-next", "prev": "a.comic-nav-previous", "parenting": [0, 0]}, "www.giantitp.com": {"name": "Order of the Stick", "next": "a > img[alt=\"Next Comic\"]", "prev": "a > img[alt=\"Previous Comic\"]", "parenting": [1, 1]}, "lawcomic.net": {"name": "The Illustrated Guide to Law", "next": "a[rel=next]", "prev": "a[rel=prev]", "parenting": [0, 0]}};
 
 // Generated by LiveScript 1.5.0
 (function(){

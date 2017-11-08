@@ -1,4 +1,4 @@
-script_ver = "1.5"
+script_ver = "1.6"
 script_ns = "samuelphillips.net"
 
 [[sites]]
@@ -86,3 +86,9 @@ strip_name = "The Illustrated Guide to Law"
 prev_selector = "a[rel=prev]"
 next_selector = "a[rel=next]"
 domain = "lawcomic.net"
+
+[[sites]]
+strip_name = "Three Panel Soul"
+prev_selector = "a.prev"
+next_selector = "a.next"
+domain = "www.threepanelsoul.com"
