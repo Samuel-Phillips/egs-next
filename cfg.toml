@@ -1,4 +1,4 @@
-script_ver = "1.6"
+script_ver = "1.7"
 script_ns = "samuelphillips.net"
 
 [[sites]]
@@ -92,3 +92,9 @@ strip_name = "Three Panel Soul"
 prev_selector = "a.prev"
 next_selector = "a.next"
 domain = "www.threepanelsoul.com"
+
+[[sites]]
+strip_name = "MonkeyUser.com"
+prev_selector = ".prev a"
+next_selector = ".next a"
+domain = "www.monkeyuser.com"
