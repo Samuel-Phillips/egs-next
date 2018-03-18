@@ -1,4 +1,4 @@
-script_ver = "1.7"
+script_ver = "1.8"
 script_ns = "samuelphillips.net"
 
 [[sites]]
@@ -98,3 +98,9 @@ strip_name = "MonkeyUser.com"
 prev_selector = ".prev a"
 next_selector = ".next a"
 domain = "www.monkeyuser.com"
+
+[[sites]]
+strip_name = "Gaia"
+prev_selector = "a[rel=prev]"
+next_selector = "a[rel=next]"
+domain = "www.sandraandwoo.com"
