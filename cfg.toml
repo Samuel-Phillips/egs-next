@@ -1,4 +1,4 @@
-script_ver = "1.8"
+script_ver = "1.9"
 script_ns = "samuelphillips.net"
 
 [[sites]]
@@ -104,3 +104,16 @@ strip_name = "Gaia"
 prev_selector = "a[rel=prev]"
 next_selector = "a[rel=next]"
 domain = "www.sandraandwoo.com"
+
+[[sites]]
+strip_name = "The Adventures of Dr. McNinja"
+prev_selector = "a.prev"
+next_selector = "a.next"
+domain = "drmcninja.com"
+
+[[sites]]
+strip_name = "Girl Genius"
+prev_selector = "#bottomprev"
+next_selector = "#bottomnext"
+domain = "www.girlgeniusonline.com"
+
