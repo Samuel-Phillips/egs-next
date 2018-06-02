@@ -1,4 +1,4 @@
-script_ver = "1.9"
+script_ver = "1.10"
 script_ns = "samuelphillips.net"
 
 [[sites]]
@@ -9,8 +9,8 @@ domain = "www.baldwinpage.com"
 
 [[sites]]
 strip_name = "El Goonish Shrive"
-next_selector = ".next"
-prev_selector = ".prev"
+next_selector = "a[rel=next]"
+prev_selector = "a[rel=prev]"
 domain = "www.egscomics.com"
 
 [[sites]]
