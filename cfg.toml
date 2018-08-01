@@ -11,7 +11,7 @@ domain = "www.baldwinpage.com"
 strip_name = "El Goonish Shrive"
 next_selector = "a[rel=next]"
 prev_selector = "a[rel=prev]"
-domain = "www.egscomics.com"
+domain = ["www.egscomics.com", "egscomics.com"]
 
 [[sites]]
 strip_name = "Will Save World for Gold"

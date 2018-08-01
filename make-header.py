@@ -58,13 +58,18 @@ includes = []
 strip_names = []
 
 for site in cfg['sites']:
-    site_conf[site['domain']] = {
-        'next': site['next_selector'],
-        'prev': site['prev_selector'],
-        'parenting': site.get('parenting', [0,0]),
-        'name': site['strip_name'],
-    }
-    includes.append(icl.format(domain=site['domain']))
+    domains = site['domain']
+    if not isinstance(domains, list):
+        domains = (domains,)
+
+    for domain in domains:
+        site_conf[domain] = {
+            'next': site['next_selector'],
+            'prev': site['prev_selector'],
+            'parenting': site.get('parenting', [0,0]),
+            'name': site['strip_name'],
+        }
+        includes.append(icl.format(domain=domain))
     strip_names.append(site['strip_name'])
 
 result = template.format(
