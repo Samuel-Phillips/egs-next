@@ -1,4 +1,4 @@
-script_ver = "1.10"
+script_ver = "1.11"
 script_ns = "samuelphillips.net"
 
 [[sites]]
@@ -117,3 +117,8 @@ prev_selector = "#bottomprev"
 next_selector = "#bottomnext"
 domain = "www.girlgeniusonline.com"
 
+[[sites]]
+strip_name = "Unsounded"
+prev_selector = "a.back"
+next_selector = "a.forward"
+domain = "www.casualvillain.com"
