@@ -122,3 +122,9 @@ strip_name = "Unsounded"
 prev_selector = "a.back"
 next_selector = "a.forward"
 domain = "www.casualvillain.com"
+
+[[sites]]
+strip_name = "Replay"
+prev_selector = "a.comic-nav-previous"
+next_selector = "a.comic-nav-next"
+domain = "replaycomic.com"
