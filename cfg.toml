@@ -1,4 +1,4 @@
-script_ver = "1.11"
+script_ver = "1.12"
 script_ns = "samuelphillips.net"
 
 [[sites]]
@@ -128,3 +128,10 @@ strip_name = "Replay"
 prev_selector = "a.comic-nav-previous"
 next_selector = "a.comic-nav-next"
 domain = "replaycomic.com"
+
+[[sites]]
+strip_name = "SITM"
+prev_selector = "a.comic-nav-previous"
+next_selector = "a.comic-nav-next"
+domain = "www.konradokonski.com"
+path = "/SITM/comic"

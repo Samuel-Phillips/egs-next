@@ -1,10 +1,11 @@
 const KEY_CODE_LEFT = 37
 const KEY_CODE_RIGHT = 39
 
-sitecfg = site_conf[window.location.hostname];
+dcfg = site_conf[window.location.hostname];
 
-# wait for the DOM to load
-$ !->
+msg = (msg) -> console.log "WKS #{msg}"
+
+function load-as sitecfg
     # find the links
     next = document.query-selector sitecfg.next
     prev = document.query-selector sitecfg.prev
@@ -29,10 +30,27 @@ $ !->
             e.prevent-default!
             location.href = next.href
 
-    console.log "Webcomic Keyboard Shortcuts enabled; " +
-        "this site hosts #{sitecfg.name}"
+    msg "enabled; " + "this site hosts #{sitecfg.name}"
 
     unless next?
-        console.log "Will not be able to move forward on this page"
+        msg "Will not be able to move forward on this page"
     unless prev?
-        console.log "Will not be able to move backwards on this page"
+        msg "Will not be able to move backwards on this page"
+
+# wait for the DOM to load
+$ !->
+    loaded = false
+    # find which one it is
+    for sitecfg in dcfg
+        if sitecfg.path and location.pathname.starts-with(sitecfg.path)
+            load-as sitecfg
+            loaded = true
+            break
+    if not loaded
+        for sitecfg in dcfg
+            if not sitecfg.path
+                load-as sitecfg
+                loaded = true
+                break
+    if not loaded
+        msg "Could not find site"

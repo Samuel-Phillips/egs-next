@@ -63,12 +63,18 @@ for site in cfg['sites']:
         domains = (domains,)
 
     for domain in domains:
-        site_conf[domain] = {
+        if domain not in site_conf:
+            site_conf[domain] = []
+
+        obj = {
             'next': site['next_selector'],
             'prev': site['prev_selector'],
             'parenting': site.get('parenting', [0,0]),
             'name': site['strip_name'],
         }
+        if 'path' in site:
+            obj['path'] = site['path']
+        site_conf[domain].append(obj)
         includes.append(icl.format(domain=domain))
     strip_names.append(site['strip_name'])
 
