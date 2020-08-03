@@ -1,4 +1,4 @@
-script_ver = "1.12"
+script_ver = "1.13"
 script_ns = "samuelphillips.net"
 
 [[sites]]
@@ -135,3 +135,9 @@ prev_selector = "a.comic-nav-previous"
 next_selector = "a.comic-nav-next"
 domain = "www.konradokonski.com"
 path = "/SITM/comic"
+
+[[sites]]
+strip_name = "Namesake"
+prev_selector = ".cc-prev"
+next_selector = ".cc-next"
+domain = "www.namesakecomic.com"
